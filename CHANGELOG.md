@@ -1,3 +1,34 @@
+## Faster and smoother
+##### July 28 2024
+
+The most important change in this update is that now every time you change the theme, bspwm does not restart, the changes are reflected without restarting the Window Manager.
+
+Likewise with the change in structure, it is no longer necessary to kill and restart certain daemons such as sxhkd, it also prevents processes from being checked whether they are already started or not to launch them, they are only checked the first time you enter the environment and that's it, and some scripts such as RiceSelector and WallpaperSelect were modified to not depend on the main variable $RICETHEME. And this makes switching between themes feel faster and smoother.
+
+The second important change is in the Theme.sh file within all themes, now we try to make it easier to edit the configurations, setting variables with default values, making their modification easier.
+
+I fixed many bugs in the eww widgets, as well as the Workspaces script for z0mbi3 and Andrea should now run smoother.
+
+The logic in some scripts has been improved and everything should work fine.
+
+The menu to select a terminal was improved and now looks better. And the logic of the code was improved.
+
+Finally, in the MediaControl script, the code to generate the song covers for the eww widgets no longer creates the cover every second, overloading performance, now it only generates it once and that's it.
+
+## Android Mount applet
+##### July 10 2024
+
+New applet to manage your android phones via USB. I already test it with 3 phones connected at same time, so if you find errors pls report.
+It uses simple-mtpfs app, from AUR. If you already have my dots, just install it `paru -S simple-mtpfs` Additionally you may need gvfs-mtp from regular repos.
+
+| <img src="https://github.com/gh0stzk/dotfiles/assets/67278339/4c387426-17cb-4965-83f8-31a21f14bd47" alt="Android Mount applet"> |
+| :--------------------------------------------------------------------------------------------------------------------------------: |
+|                                                               Android Mount applet                                                               |
+
+
+---
+
+
 ## 3 New rices, rofi applets and fixes
 ##### July 03 2024
 

@@ -13,7 +13,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       600px;
+    width:                       490px;
     x-offset:                    0px;
     y-offset:                    0px;
     margin:                      0px;
@@ -31,7 +31,38 @@ mainbox {
     margin:                      0px;
     padding:                     15px;
     background-color:            transparent;
-    children:                    [ "message", "listview" ];
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     0px;
+    border:                      0px;
+    border-radius:               0px;
+    border-color:                @selected;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "prompt"];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    font:                        "JetbrainsMono NF Bold 10";
+    str:                         "";
+    padding:                     10px 17px 10px 12px;
+    border-radius:               0px;
+    background-color:            @active;
+    text-color:                  @background;
+}
+
+prompt {
+    enabled:                     true;
+    padding:                     10px;
+    border-radius:               0px;
+    background-color:            @selected;
+    text-color:                  @background;
 }
 
 message {
@@ -54,8 +85,8 @@ textbox {
 
 listview {
     enabled:                     true;
-    columns:                     5;
-    lines:                       1;
+    columns:                     1;
+    lines:                       3;
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
@@ -77,7 +108,7 @@ element {
 }
 
 element-text {
-    font:                        "JetbrainsMono NF Bold 20";
+    font:                        "JetbrainsMono NF Bold 17";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
